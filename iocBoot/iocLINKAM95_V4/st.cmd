@@ -5,12 +5,14 @@
 
 #< envPaths
 
+epicsEnvSet "STREAM_PROTOCOL_PATH" "../../protocol/devlinkam95.proto"
+
 ## Register all support components
 dbLoadDatabase("../../dbd/LINKAM95_V4.dbd",0,0)
 LINKAM95_V4_registerRecordDeviceDriver(pdbbase) 
 
 ## Load record instances
-dbLoadRecords("../../db/LINKAM95_V4.db","user=mjc23")
+dbLoadRecords("../../db/LINKAM95_V4.db","")
 
 iocInit()
 
