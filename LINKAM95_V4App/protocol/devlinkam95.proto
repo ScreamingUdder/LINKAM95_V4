@@ -1,0 +1,50 @@
+OutTerminator = CR;
+InTerminator  = CR;
+#
+# From Diamond T92-94 protocol
+#
+#replytimeout = 1000;
+#readtimeout  = 500;
+#locktimeout = 5000;
+#extrainput   = Ignore;
+#separator = "";
+
+getStatus {
+	out "T";
+	in "%10c";
+}
+
+setRate {
+	out "R1%04u";
+	in "";
+}
+
+
+setLimit { 
+	out "L1%04i";
+	in "";
+}
+
+# Stop(E)/Start(S) Temperature control
+setRampControl { 
+	out "%{E|S}";
+	in "";
+}
+
+# Force heating (H), force cooling (C), or hold at current temperature (O)
+setForceRamp {
+	out "%{H|C|O}";
+	in "";
+}
+
+# Select LNP manual (Pm0) or automatic mode (Pa0)
+setPumpMode { 
+	out "%{Pm0|Pa0}";
+	in "";
+}
+
+# Select LNP speed (in manual mode only)
+setPumpSpeed { 
+	out "P%{0|1|2|3|4|5|6|7|8|9|:|;|<|=|>|?|@|A|B|C|D|E|F|G|H|I|J|K|L|M|N}";
+	in "";
+}
