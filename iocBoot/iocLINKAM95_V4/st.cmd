@@ -7,14 +7,14 @@
 
 epicsEnvSet "STREAM_PROTOCOL_PATH" "../../protocol/devlinkam95.proto"
 
+drvAsynIPPortConfigure("P0", "127.0.0.1:57677")
+
 ## Register all support components
 dbLoadDatabase("../../dbd/LINKAM95_V4.dbd",0,0)
 LINKAM95_V4_registerRecordDeviceDriver(pdbbase) 
 
 ## Load record instances
-dbLoadRecords("../../db/LINKAM95_V4.db","")
+dbLoadRecords("../../db/LINKAM95.db","P=THIS_PC:, port=P0")
 
 iocInit()
 
-## Start any sequence programs
-#seq sncLINKAM95_V4,"user=mjc23"
