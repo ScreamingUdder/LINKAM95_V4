@@ -18,3 +18,6 @@ dbLoadRecords("../../db/LINKAM95.db","P=THIS_PC:, port=P0")
 
 iocInit()
 
+# Start V4 server
+startPVAServer
+
