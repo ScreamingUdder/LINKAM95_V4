@@ -15,6 +15,7 @@ DBD += LINKAM95_V4.dbd
 # LINKAM95_V4.dbd will be made up from these files:
 LINKAM95_V4_DBD += base.dbd
 LINKAM95_V4_DBD += dbPv.dbd
+LINKAM95_V4_DBD += PVAServerRegister.dbd
 
 # Include dbd files from all support applications:
 LINKAM95_V4_DBD += asyn.dbd
@@ -23,9 +24,8 @@ LINKAM95_V4_DBD += stream.dbd
 LINKAM95_V4_DBD += calcSupport.dbd
 
 # Add all the support libraries needed by this IOC
-LINKAM95_V4_LIBS += stream asyn calc
-
-LINKAM95_V4_LIBS += pvaSrv pvAccess pvData
+LINKAM95_V4_LIBS += stream asyn calc pcre sscan
+LINKAM95_V4_LIBS += pvaSrv pvAccess pvData pvMB
 LINKAM95_V4_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 # LINKAM95_V4_registerRecordDeviceDriver.cpp derives from LINKAM95_V4.dbd

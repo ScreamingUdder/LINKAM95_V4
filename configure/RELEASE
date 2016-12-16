@@ -24,9 +24,12 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 # If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
 
-ASYN=C:\Instrument\Apps\EPICS\support\asyn\master
-CALC=C:\Instrument\Apps\EPICS\support\calc\master
-STREAMDEVICE=C:\Instrument\Apps\EPICS\support\StreamDevice\master
+SUPPORT=C:\Instrument\Apps\EPICS\support
+ASYN=$(SUPPORT)\asyn\master
+CALC=$(SUPPORT)\calc\master
+STREAMDEVICE=$(SUPPORT)\StreamDevice\master
+PCRE=$(SUPPORT)\pcre\master
+SSCAN=$(SUPPORT)\sscan\master
 
 EV4_BASE=C:\Instrument\Apps\EPICS\support\EPICS_V4\master
 PVDATABASE=$(EV4_BASE)/pvDatabaseCPP
