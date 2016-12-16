@@ -17,6 +17,8 @@ DBD += $(APPNAME).dbd
 
 # LINKAM95_V4-IOC-01.dbd will be made up from these files:
 $(APPNAME)_DBD += base.dbd
+$(APPNAME)_DBD += dbPv.dbd
+$(APPNAME)_DBD += PVAServerRegister.dbd
 ## ISIS standard dbd ##
 $(APPNAME)_DBD += devSequencer.dbd
 $(APPNAME)_DBD += icpconfig.dbd
@@ -30,9 +32,11 @@ $(APPNAME)_DBD += stream.dbd
 $(APPNAME)_DBD += asyn.dbd
 $(APPNAME)_DBD += drvAsynSerialPort.dbd
 $(APPNAME)_DBD += drvAsynIPPort.dbd
+$(APPNAME)_DBD += calcSupport.dbd
 
 # Add all the support libraries needed by this IOC
 ## ISIS standard libraries ##
+$(APPNAME)_LIBS += calc sscan
 $(APPNAME)_LIBS += seqDev seq pv
 $(APPNAME)_LIBS += devIocStats 
 $(APPNAME)_LIBS += pvdump $(MYSQLLIB) easySQLite sqlite 
@@ -44,6 +48,8 @@ $(APPNAME)_LIBS += utilities pcre libjson zlib
 $(APPNAME)_LIBS += stream
 $(APPNAME)_LIBS += pcre
 $(APPNAME)_LIBS += asyn
+
+$(APPNAME)_LIBS += pvaSrv pvAccess pvData pvMB
 
 # LINKAM95_V4-IOC-01_registerRecordDeviceDriver.cpp derives from LINKAM95_V4-IOC-01.dbd
 $(APPNAME)_SRCS += $(APPNAME)_registerRecordDeviceDriver.cpp

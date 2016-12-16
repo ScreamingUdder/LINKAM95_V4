@@ -49,3 +49,6 @@ iocInit
 
 ##ISIS## Stuff that needs to be done after iocInit is called e.g. sequence programs 
 < $(IOCSTARTUP)/postiocinit.cmd
+
+## Start PVA server for V4 support
+startPVAServer
