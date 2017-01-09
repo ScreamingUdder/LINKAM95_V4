@@ -24,7 +24,7 @@ LINKAM95_V4_DBD += stream.dbd
 LINKAM95_V4_DBD += calcSupport.dbd
 
 # Add all the support libraries needed by this IOC
-LINKAM95_V4_LIBS += stream asyn calc pcre sscan
+LINKAM95_V4_LIBS += asyn calc sscan stream 
 LINKAM95_V4_LIBS += pvaSrv pvAccess pvData pvMB
 LINKAM95_V4_LIBS += $(EPICS_BASE_IOC_LIBS)
 

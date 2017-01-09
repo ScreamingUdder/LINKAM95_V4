@@ -24,14 +24,14 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 # If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
 
-SUPPORT=C:\Instrument\Apps\EPICS\support
-ASYN=$(SUPPORT)\asyn\master
-CALC=$(SUPPORT)\calc\master
-STREAMDEVICE=$(SUPPORT)\StreamDevice\master
-PCRE=$(SUPPORT)\pcre\master
-SSCAN=$(SUPPORT)\sscan\master
+SUPPORT_DIR=/opt/epics/support
+ASYN=$(SUPPORT_DIR)/asyn
+CALC=$(SUPPORT_DIR)/calc
+STREAMDEVICE=$(SUPPORT_DIR)/streamdevice
+PCRE=$(SUPPORT_DIR)/pcre
+SSCAN=$(SUPPORT_DIR)/sscan
 
-EV4_BASE=C:\Instrument\Apps\EPICS\support\EPICS_V4\master
+EV4_BASE=/opt/epics/modules
 PVDATABASE=$(EV4_BASE)/pvDatabaseCPP
 PVASRV=$(EV4_BASE)/pvaSrv
 PVACCESS=$(EV4_BASE)/pvAccessCPP
@@ -40,7 +40,7 @@ PVDATA=$(EV4_BASE)/pvDataCPP
 PVCOMMON=$(EV4_BASE)/pvCommonCPP
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=C:\Instrument\Apps\EPICS\base\master
+EPICS_BASE=/opt/epics/bases/base-3.15.2
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
