@@ -10,7 +10,7 @@ There are two "main" branches:
 
 ## Running lewis
 
-Download from here (https://github.com/DMSC-Instrument-Data/lewis)
+Download from [here](https://github.com/DMSC-Instrument-Data/lewis)
 
 `./lewis.py -p stream linkam_t95 -- --bind-address localhost --port 57677`
 
