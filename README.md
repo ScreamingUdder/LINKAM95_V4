@@ -8,9 +8,9 @@ There are two "main" branches:
 	* I found it difficult to include pcre but I think we don't need it
 * ibex_version - drop the code into the ioc\master folder of IBEX and build it and it should work. It has to be built separately as IBEX's build will ignore it
 
-## Running lewis
+## Running Lewis
 
-Download from [here](https://github.com/DMSC-Instrument-Data/lewis)
+Download Lewis from [here](https://github.com/DMSC-Instrument-Data/lewis)
 
 `./lewis.py -p stream linkam_t95 -- --bind-address localhost --port 57677`
 
